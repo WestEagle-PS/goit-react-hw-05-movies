@@ -30,7 +30,7 @@ const SingleMoviePage = () => {
     };
 
     fetchMovie();
-  }, []);
+  }, [id]);
 
   const { poster_path, title, original_title, userScore, overview, genresInfo } = movie;
 

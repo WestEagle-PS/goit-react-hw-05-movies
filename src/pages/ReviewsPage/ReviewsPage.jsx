@@ -17,7 +17,7 @@ const ReviewsPage = () => {
       }
     };
     fetchReview();
-  }, []);
+  }, [id]);
 
   const elements = review.map(({ id, author, content }) => (
     <li key={id} className={css.item}>

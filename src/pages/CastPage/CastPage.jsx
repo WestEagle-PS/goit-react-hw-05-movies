@@ -20,7 +20,7 @@ const CastPage = () => {
       }
     };
     fetchCast();
-  }, []);
+  }, [id]);
 
   const elements = cast.map(({ cast_id, profile_path, character, original_name, name }) => (
     <li key={cast_id}>

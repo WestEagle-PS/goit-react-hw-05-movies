@@ -1,5 +1,5 @@
 import SearchMovie from '../../components/SearchMovie/SearchMovie';
-import css from './movies-page.module.scss';
+// import css from './movies-page.module.scss';
 
 const MoviesPage = () => {
   return (

@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { getPopularMovies } from '../../shared/api/popularMovies';
 import MoviesList from 'shared/components/MoviesList/MoviesList';
-import css from './popular-movies.module.scss';
+// import css from './popular-movies.module.scss';
 
 const PopularMovies = () => {
   const [movies, setMovies] = useState([]);
