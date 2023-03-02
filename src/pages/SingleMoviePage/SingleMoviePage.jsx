@@ -25,7 +25,7 @@ const SingleMoviePage = () => {
 
         setMovie({ poster_path, title, original_title, userScore, overview, genresInfo, release_date });
       } catch (error) {
-        console.log(error);
+        console.log(error.message);
       }
     };
 

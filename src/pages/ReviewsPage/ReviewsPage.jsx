@@ -14,7 +14,7 @@ const ReviewsPage = () => {
         const { data } = await getReviewsById(id);
         setReview(data.results);
       } catch (error) {
-        console.log(error);
+        console.log(error.message);
       }
     };
     fetchReview();
