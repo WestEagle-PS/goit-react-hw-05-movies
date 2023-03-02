@@ -18,12 +18,12 @@ const SingleMoviePage = () => {
       try {
         const { data } = await getMoviesById(id);
 
-        const { poster_path, title, original_title, vote_average, overview, genres } = data;
+        const { poster_path, title, original_title, vote_average, overview, genres, release_date } = data;
 
         const userScore = (vote_average * 10).toFixed(2);
         const genresInfo = genres.map(item => item.name).join(`, `);
 
-        setMovie({ poster_path, title, original_title, userScore, overview, genresInfo });
+        setMovie({ poster_path, title, original_title, userScore, overview, genresInfo, release_date });
       } catch (error) {
         console.log(error);
       }
@@ -32,7 +32,7 @@ const SingleMoviePage = () => {
     fetchMovie();
   }, [id]);
 
-  const { poster_path, title, original_title, userScore, overview, genresInfo } = movie;
+  const { poster_path, title, original_title, userScore, overview, genresInfo, release_date } = movie;
 
   return (
     <div className={css.wrapper}>
@@ -42,7 +42,9 @@ const SingleMoviePage = () => {
         </div>
 
         <div className={css.info}>
-          <h2 className={css.title}>{original_title}</h2>
+          <h2 className={css.title}>
+            {original_title} ({release_date})
+          </h2>
           <p className={css.text}>User Score: {userScore} %</p>
           <h3 className={css.subtitle}>Overview:</h3>
           <p className={css.text}>{overview}</p>
