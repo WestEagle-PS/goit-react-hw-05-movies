@@ -5,7 +5,6 @@ import css from './reviews-page.module.scss';
 
 const ReviewsPage = () => {
   const [review, setReview] = useState([]);
-  console.log('review: ', review);
 
   const { id } = useParams();
 

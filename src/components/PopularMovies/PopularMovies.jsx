@@ -12,7 +12,7 @@ const PopularMovies = () => {
         const { data } = await getPopularMovies();
         setMovies(data.results);
       } catch (error) {
-        console.log(error);
+        console.log(error.message);
       }
     };
     fetchPopularMovies();

@@ -9,7 +9,7 @@ const MoviesList = ({ items = [] }) => {
       <Link to={`/movies/${id}`} state={{ from: location }} className={css.link}>
         <div>
           <img className={css.img} src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} width="250" />
-          <h2 className={css.title}>{original_title}</h2>
+          <h2 className={css.title}>{title}</h2>
         </div>
       </Link>
     </li>
