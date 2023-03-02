@@ -5,6 +5,8 @@ import css from './reviews-page.module.scss';
 
 const ReviewsPage = () => {
   const [review, setReview] = useState([]);
+  console.log('review: ', review);
+
   const { id } = useParams();
 
   useEffect(() => {
@@ -29,7 +31,7 @@ const ReviewsPage = () => {
   return (
     <>
       <h2 className={css.title}>Reviews</h2>
-      <ul className={css.list}>{review !== [] ? elements : "We don't have any reviews for this movie"}</ul>
+      <ul className={css.list}>{review.length !== 0 ? elements : "We don't have any reviews for this movie"}</ul>
     </>
   );
 };
