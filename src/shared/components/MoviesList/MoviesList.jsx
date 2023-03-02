@@ -4,8 +4,6 @@ import placeholder from '../../../images/posterPlaceholder.jpg';
 import css from './movies-list.module.scss';
 
 const MoviesList = ({ items = [] }) => {
-  console.log('items: ', items);
-
   const location = useLocation();
 
   const elements = items.map(({ id, title, poster_path }) => (
